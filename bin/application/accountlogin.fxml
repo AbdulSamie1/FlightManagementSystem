@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="442.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <ImageView fitHeight="452.0" fitWidth="659.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../Downloads/IMG_2602.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="452.0" prefWidth="659.0">
+         <children>
+            <Label layoutX="78.0" layoutY="181.0" prefHeight="18.0" prefWidth="54.0" text="Password:" />
+            <AnchorPane prefHeight="452.0" prefWidth="230.0" style="-fx-background-color: #ebb12a;">
+               <children>
+                  <TextField fx:id="getLogInEmail" layoutX="41.0" layoutY="130.0" promptText="Email" style="-fx-background-color: #edbc4a;">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <TextField fx:id="getLogInPassword" layoutX="39.0" layoutY="163.0" promptText="Password" style="-fx-background-color: #edbc4a;">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </TextField>
+                  <Button fx:id="btnForgetPassword" layoutX="39.0" layoutY="189.0" mnemonicParsing="false" onAction="#resetPassword" style="-fx-background-color: #ebb12a;" text="Forgot password?" underline="true">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnLogIn" layoutX="143.0" layoutY="206.0" mnemonicParsing="false" onAction="#checkLogIn" style="-fx-background-color: #edbc4a;" text="Login">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="btnCSignUp" layoutX="41.0" layoutY="297.0" mnemonicParsing="false" onAction="#signUpScreen" style="-fx-background-color: #ebb12a;" text="New user? Sign up here..." underline="true">
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </Button>
+                  <Label layoutX="99.0" layoutY="254.0" prefHeight="18.0" prefWidth="31.0" text="OR" />
+                  <Label layoutX="81.0" layoutY="67.0" text="Log In" textFill="#3b3b3b">
+                     <font>
+                        <Font name="SansSerif Bold" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label layoutX="505.0" layoutY="392.0" text="Flight Managment" textFill="#a6a5a5">
+               <font>
+                  <Font name="Forte" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="575.0" layoutY="412.0" text="System" textFill="#999999">
+               <font>
+                  <Font name="Forte" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
